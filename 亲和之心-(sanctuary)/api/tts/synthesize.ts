@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { alignTextToVisemes } from '../../ttsAlign';
+import { alignTextToVisemes } from './ttsAlign';
 import {
   fetchCosyVoiceInferenceSft,
   pcm16leToWavBuffer,
   pcmDurationSec,
-} from '../../cosyvoiceTts';
+} from './cosyvoiceTts';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
