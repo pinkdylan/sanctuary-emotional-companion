@@ -1,0 +1,9 @@
+# Railway 部署配置
+{
+  "build": {
+    "builder": "dockerfile"
+  },
+  "deploy": {
+    "startCommand": "node --experimental-strip-types server.ts"
+  }
+}

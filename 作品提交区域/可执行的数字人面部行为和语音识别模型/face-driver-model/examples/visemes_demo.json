@@ -1,0 +1,15 @@
+{
+  "duration_sec": 2.4,
+  "visemes": [
+    { "start": 0.0, "end": 0.2, "viseme": "sil", "strength": 1.0 },
+    { "start": 0.2, "end": 0.45, "viseme": "a", "strength": 1.0 },
+    { "start": 0.45, "end": 0.7, "viseme": "i", "strength": 0.9 },
+    { "start": 0.7, "end": 0.95, "viseme": "u", "strength": 0.95 },
+    { "start": 0.95, "end": 1.2, "viseme": "e", "strength": 0.9 },
+    { "start": 1.2, "end": 1.45, "viseme": "o", "strength": 1.0 },
+    { "start": 1.45, "end": 1.65, "viseme": "mbp", "strength": 1.0 },
+    { "start": 1.65, "end": 1.95, "viseme": "a", "strength": 0.85 },
+    { "start": 1.95, "end": 2.25, "viseme": "o", "strength": 0.9 },
+    { "start": 2.25, "end": 2.4, "viseme": "sil", "strength": 1.0 }
+  ]
+}

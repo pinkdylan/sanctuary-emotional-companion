@@ -1,0 +1,11 @@
+{
+  "name": "心聆小队",
+  "private": true,
+  "description": "在子目录 亲和之心-(sanctuary) 中开发；也可在此目录直接 npm run dev",
+  "scripts": {
+    "dev": "npm run dev --prefix \"亲和之心-(sanctuary)\"",
+    "build": "npm run build --prefix \"亲和之心-(sanctuary)\"",
+    "lint": "npm run lint --prefix \"亲和之心-(sanctuary)\"",
+    "preview": "npm run preview --prefix \"亲和之心-(sanctuary)\""
+  }
+}

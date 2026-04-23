@@ -1,0 +1,12 @@
+{
+  "backend": "dummy",
+  "audio_path": "/Users/pinkdylan/Desktop/项目/心聆小队/作品提价/可执行工程/asr-model/examples/demo.wav",
+  "text": "示例转写结果：已接收音频文件 demo.wav。请切换 faster-whisper 或 vosk 获取真实识别内容。",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.0,
+      "text": "示例转写结果：已接收音频文件 demo.wav。请切换 faster-whisper 或 vosk 获取真实识别内容。"
+    }
+  ]
+}

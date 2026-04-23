@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-inverse-on-surface: #f2f1ed;
+  --color-tertiary-fixed: #ffdbd1;
+  --color-on-error-container: #93000a;
+  --color-outline: #6f7976;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed-variant: #344b47;
+  --color-on-tertiary-fixed: #370e04;
+  --color-surface: #faf9f5;
+  --color-primary: #26695f;
+  --color-error-container: #ffdad6;
+  --color-on-secondary-fixed: #071f1c;
+  --color-background: #faf9f5;
+  --color-on-surface-variant: #3f4946;
+  --color-on-tertiary-fixed-variant: #6d3829;
+  --color-surface-container-high: #e9e8e4;
+  --color-outline-variant: #bfc9c5;
+  --color-tertiary-fixed-dim: #ffb5a1;
+  --color-on-primary: #ffffff;
+  --color-surface-container: #efeeea;
+  --color-primary-container: #6fafa4;
+  --color-surface-variant: #e3e2df;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-container: #00413a;
+  --color-primary-fixed-dim: #92d3c7;
+  --color-on-primary-fixed: #00201c;
+  --color-on-surface: #1b1c1a;
+  --color-on-secondary-container: #516964;
+  --color-on-tertiary-container: #5d2b1e;
+  --color-surface-container-highest: #e3e2df;
+  --color-surface-dim: #dbdad6;
+  --color-tertiary-container: #d9927f;
+  --color-secondary-fixed: #cee8e2;
+  --color-secondary-fixed-dim: #b2ccc6;
+  --color-on-background: #1b1c1a;
+  --color-inverse-primary: #92d3c7;
+  --color-inverse-surface: #30312e;
+  --color-tertiary: #894f3f;
+  --color-error: #ba1a1a;
+  --color-secondary-container: #cee8e2;
+  --color-on-primary-fixed-variant: #005048;
+  --color-primary-fixed: #adefe3;
+  --color-surface-bright: #faf9f5;
+  --color-surface-tint: #26695f;
+  --color-surface-container-low: #f5f4f0;
+  --color-on-tertiary: #ffffff;
+  --color-secondary: #4b635e;
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+    min-height: max(884px, 100dvh);
+  }
+}
+
+@layer utilities {
+  .signature-gradient {
+    background: linear-gradient(135deg, #26695f 0%, #6fafa4 100%);
+  }
+  .tactile-glow {
+    box-shadow: 0 8px 24px rgba(47, 58, 58, 0.06);
+  }
+  .asymmetric-shape {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  .tonal-depth-shift {
+    background-color: rgba(250, 249, 245, 0.8);
+    backdrop-filter: blur(20px);
+  }
+  .breath-animation {
+    box-shadow: 0 0 0 0 rgba(111, 175, 164, 0.4);
+    animation: pulse 3s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
+  @keyframes pulse {
+    to { box-shadow: 0 0 0 30px rgba(111, 175, 164, 0); }
+  }
+}

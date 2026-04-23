@@ -1,0 +1,5 @@
+{
+  "name": "亲和之心 (Sanctuary)",
+  "description": "为情感健康而设计的贴心数字伙伴，提供陪伴聊天、情绪记录与风险评估。",
+  "requestFramePermissions": ["microphone"]
+}

@@ -1,0 +1,26 @@
+{
+  "_说明": "CosyVoice 官方 FastAPI 实际返回的是 application/octet-stream 的 int16 PCM 流，不包含 JSON。本文件描述我们在 Node 网关层归一化后返回给前端的格式（与 CosyVoice 音频时长对齐）。",
+  "source": "normalized-from-cosyvoice-stream",
+  "durationSec": 3.42,
+  "sampleRate": 22050,
+  "cosyvoice": {
+    "endpoint": "POST /inference_sft",
+    "formFields": {
+      "tts_text": "您好，今天我会陪着您慢慢聊。",
+      "spk_id": "中文女"
+    },
+    "rawResponse": "streaming PCM s16le mono chunks（无 JSON）"
+  },
+  "audioUrl": "data:audio/wav;base64,UklGRi...",
+  "useBrowserTts": false,
+  "visemes": [
+    { "t": 0, "v": "sil" },
+    { "t": 0.12, "v": "I" },
+    { "t": 0.28, "v": "aa" },
+    { "t": 0.45, "v": "E" }
+  ],
+  "phonemeTimeline": [
+    { "t": 0, "phone": "nin2", "viseme": "I" },
+    { "t": 0.12, "phone": "hao3", "viseme": "aa" }
+  ]
+}
