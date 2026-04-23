@@ -101,9 +101,19 @@ export async function sendChatMessage(
       setKbScanActive(false);
       setSessionState('error');
       let detail = '';
-      if (axios.isAxiosError(err) && err.response?.data && typeof err.response.data === 'object') {
-        const e = (err.response.data as { error?: string }).error;
-        if (e) detail = ` ${e}`;
+      if (axios.isAxiosError(err)) {
+        if (err.response?.data) {
+          const errorData = err.response.data;
+          if (typeof errorData === 'object' && 'error' in errorData) {
+            detail = ` ${String(errorData.error)}`;
+          } else {
+            detail = ` ${JSON.stringify(errorData)}`;
+          }
+        } else if (err.message) {
+          detail = ` ${err.message}`;
+        }
+      } else if (err instanceof Error) {
+        detail = ` ${err.message}`;
       }
       setError(`心理导师请求失败，请重试。${detail}`.trim());
       setTimeout(() => setSessionState('idle'), 2000);
@@ -166,9 +176,19 @@ export async function sendChatMessage(
     setKbScanActive(false);
     setSessionState('error');
     let detail = '';
-    if (axios.isAxiosError(err) && err.response?.data && typeof err.response.data === 'object') {
-      const e = (err.response.data as { error?: string }).error;
-      if (e) detail = ` ${e}`;
+    if (axios.isAxiosError(err)) {
+      if (err.response?.data) {
+        const errorData = err.response.data;
+        if (typeof errorData === 'object' && 'error' in errorData) {
+          detail = ` ${String(errorData.error)}`;
+        } else {
+          detail = ` ${JSON.stringify(errorData)}`;
+        }
+      } else if (err.message) {
+        detail = ` ${err.message}`;
+      }
+    } else if (err instanceof Error) {
+      detail = ` ${err.message}`;
     }
     setError(
       inputType === 'call'
